@@ -12,9 +12,15 @@ namespace OyunKutuphanesi
 {
     public partial class FormTumOyunlar : Form
     {
+        
         public FormTumOyunlar()
         {
             InitializeComponent();
+        }
+
+        private void FormTumOyunlar_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            
         }
     }
 }

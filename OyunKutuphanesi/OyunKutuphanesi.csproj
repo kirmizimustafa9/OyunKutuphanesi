@@ -52,12 +52,6 @@
     <Compile Include="FormAnasayfa.Designer.cs">
       <DependentUpon>FormAnasayfa.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormKutuphaneTanimla.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormKutuphaneTanimla.Designer.cs">
-      <DependentUpon>FormKutuphaneTanimla.cs</DependentUpon>
-    </Compile>
     <Compile Include="FormOyunEkle.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -74,6 +68,12 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FormAnasayfa.resx">
       <DependentUpon>FormAnasayfa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormOyunEkle.resx">
+      <DependentUpon>FormOyunEkle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTumOyunlar.resx">
+      <DependentUpon>FormTumOyunlar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

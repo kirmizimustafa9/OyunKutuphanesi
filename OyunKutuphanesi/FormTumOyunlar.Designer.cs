@@ -29,12 +29,79 @@ namespace OyunKutuphanesi
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormTumOyunlar));
+            this.list_oyunlar = new System.Windows.Forms.ListBox();
+            this.pb_oyunresmi = new System.Windows.Forms.PictureBox();
+            this.btn_oyna = new System.Windows.Forms.Button();
+            this.btn_kaldir = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_oyunresmi)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // list_oyunlar
+            // 
+            this.list_oyunlar.FormattingEnabled = true;
+            this.list_oyunlar.Location = new System.Drawing.Point(12, 12);
+            this.list_oyunlar.Name = "list_oyunlar";
+            this.list_oyunlar.Size = new System.Drawing.Size(230, 420);
+            this.list_oyunlar.TabIndex = 0;
+            // 
+            // pb_oyunresmi
+            // 
+            this.pb_oyunresmi.Location = new System.Drawing.Point(257, 12);
+            this.pb_oyunresmi.Name = "pb_oyunresmi";
+            this.pb_oyunresmi.Size = new System.Drawing.Size(531, 243);
+            this.pb_oyunresmi.TabIndex = 1;
+            this.pb_oyunresmi.TabStop = false;
+            // 
+            // btn_oyna
+            // 
+            this.btn_oyna.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btn_oyna.Image = ((System.Drawing.Image)(resources.GetObject("btn_oyna.Image")));
+            this.btn_oyna.Location = new System.Drawing.Point(597, 270);
+            this.btn_oyna.Name = "btn_oyna";
+            this.btn_oyna.Size = new System.Drawing.Size(191, 162);
+            this.btn_oyna.TabIndex = 2;
+            this.btn_oyna.Text = "Oyna";
+            this.btn_oyna.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btn_oyna.UseVisualStyleBackColor = true;
+            // 
+            // btn_kaldir
+            // 
+            this.btn_kaldir.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btn_kaldir.Image = ((System.Drawing.Image)(resources.GetObject("btn_kaldir.Image")));
+            this.btn_kaldir.Location = new System.Drawing.Point(257, 270);
+            this.btn_kaldir.Name = "btn_kaldir";
+            this.btn_kaldir.Size = new System.Drawing.Size(191, 162);
+            this.btn_kaldir.TabIndex = 3;
+            this.btn_kaldir.Text = "Kaldır";
+            this.btn_kaldir.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btn_kaldir.UseVisualStyleBackColor = true;
+            // 
+            // FormTumOyunlar
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "FormTumOyunlar";
+            this.Controls.Add(this.btn_kaldir);
+            this.Controls.Add(this.btn_oyna);
+            this.Controls.Add(this.pb_oyunresmi);
+            this.Controls.Add(this.list_oyunlar);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.MaximizeBox = false;
+            this.Name = "FormTumOyunlar";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Tüm Oyunlar";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FormTumOyunlar_FormClosed);
+            ((System.ComponentModel.ISupportInitialize)(this.pb_oyunresmi)).EndInit();
+            this.ResumeLayout(false);
+
         }
 
         #endregion
+
+        private System.Windows.Forms.ListBox list_oyunlar;
+        private System.Windows.Forms.PictureBox pb_oyunresmi;
+        private System.Windows.Forms.Button btn_oyna;
+        private System.Windows.Forms.Button btn_kaldir;
     }
 }
