@@ -92,6 +92,7 @@ namespace OyunKutuphanesi
             this.Controls.Add(this.pb_oyunresmi);
             this.Controls.Add(this.list_oyunlar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "FormTumOyunlar";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

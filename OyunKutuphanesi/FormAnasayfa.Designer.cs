@@ -74,6 +74,7 @@ namespace OyunKutuphanesi
             this.Controls.Add(this.btn_oyunekle);
             this.Controls.Add(this.btn_tumOyunlar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "FormAnasayfa";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
