@@ -61,6 +61,8 @@ namespace OyunKutuphanesi
             }
             catch(Exception ex)
             {
+                if (con.State != ConnectionState.Closed)
+                    con.Close();
                 MessageBox.Show($"HATA, hata mesajı ==> {ex.Message}");
             }
         }

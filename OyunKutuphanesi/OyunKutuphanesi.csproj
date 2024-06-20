@@ -64,6 +64,7 @@
     <Compile Include="FormTumOyunlar.Designer.cs">
       <DependentUpon>FormTumOyunlar.cs</DependentUpon>
     </Compile>
+    <Compile Include="Oyun.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FormAnasayfa.resx">
