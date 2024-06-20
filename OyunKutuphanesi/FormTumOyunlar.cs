@@ -103,10 +103,20 @@ namespace OyunKutuphanesi
 
         private void btn_oyna_Click(object sender, EventArgs e)
         {
-            string myPath = veriler[Convert.ToInt32(list_oyunlar.SelectedIndex.ToString())].oyunYolu;
-            System.Diagnostics.Process prc = new System.Diagnostics.Process();
-            prc.StartInfo.FileName = myPath;
-            prc.Start();
+            try
+            {
+                string myPath = veriler[Convert.ToInt32(list_oyunlar.SelectedIndex.ToString())].oyunYolu;
+                System.Diagnostics.Process prc = new System.Diagnostics.Process();
+                prc.StartInfo.FileName = myPath;
+                prc.Start();
+            }
+            catch(Exception ex)
+            {
+                if (con.State != ConnectionState.Closed)
+                    con.Close();
+                MessageBox.Show($"HATA, hata mesajı ==> {ex.Message}");
+            }
+            
         }
     }
 }
