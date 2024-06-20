@@ -89,6 +89,8 @@ namespace OyunKutuphanesi
                 komut.ExecuteNonQuery();
                 con.Close();
                 oyunListesiniGetir();
+                if (list_oyunlar.Items.Count != 0)
+                    list_oyunlar.SelectedIndex = 0;
 
             }
             catch (Exception ex)
