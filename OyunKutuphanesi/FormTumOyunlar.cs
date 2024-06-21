@@ -1,11 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.OleDb;
 
@@ -91,6 +86,9 @@ namespace OyunKutuphanesi
                 oyunListesiniGetir();
                 if (list_oyunlar.Items.Count != 0)
                     list_oyunlar.SelectedIndex = 0;
+                else
+                    pb_oyunresmi.Image = null;
+                
 
             }
             catch (Exception ex)
