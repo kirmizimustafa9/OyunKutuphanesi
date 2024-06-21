@@ -79,15 +79,23 @@ namespace OyunKutuphanesi
         {
             try
             {
-                con.Open();
-                komut = new OleDbCommand("DELETE * FROM oyunlar WHERE oyun_adi='"+list_oyunlar.SelectedItem.ToString()+"'", con);
-                komut.ExecuteNonQuery();
-                con.Close();
-                oyunListesiniGetir();
-                if (list_oyunlar.Items.Count != 0)
-                    list_oyunlar.SelectedIndex = 0;
+                if (list_oyunlar.SelectedIndex != -1)
+                {
+                    con.Open();
+                    komut = new OleDbCommand("DELETE * FROM oyunlar WHERE oyun_adi='" + list_oyunlar.SelectedItem.ToString() + "'", con);
+                    komut.ExecuteNonQuery();
+                    con.Close();
+                    oyunListesiniGetir();
+                    if (list_oyunlar.Items.Count != 0)
+                        list_oyunlar.SelectedIndex = 0;
+                    else
+                        pb_oyunresmi.Image = null;
+                }
                 else
-                    pb_oyunresmi.Image = null;
+                {
+                    MessageBox.Show("kaldırılabilir bir oyun yok");
+                }
+                
                 
 
             }
@@ -103,10 +111,18 @@ namespace OyunKutuphanesi
         {
             try
             {
-                string myPath = veriler[Convert.ToInt32(list_oyunlar.SelectedIndex.ToString())].oyunYolu;
-                System.Diagnostics.Process prc = new System.Diagnostics.Process();
-                prc.StartInfo.FileName = myPath;
-                prc.Start();
+                if (list_oyunlar.SelectedIndex != -1)
+                {
+                    string myPath = veriler[Convert.ToInt32(list_oyunlar.SelectedIndex.ToString())].oyunYolu;
+                    System.Diagnostics.Process prc = new System.Diagnostics.Process();
+                    prc.StartInfo.FileName = myPath;
+                    prc.Start();
+                }
+                else
+                {
+                    MessageBox.Show("seçili oyun yok");
+                }
+                
             }
             catch(Exception ex)
             {
