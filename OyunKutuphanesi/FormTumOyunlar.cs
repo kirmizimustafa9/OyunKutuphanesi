@@ -37,7 +37,7 @@ namespace OyunKutuphanesi
                 list_oyunlar.Items.Clear();
                 veriler.Clear();
                 con.Open();
-                komut = new OleDbCommand("SELECT * FROM oyunlar", con);
+                komut = new OleDbCommand("SELECT * FROM oyunlar ORDER BY oyun_adi ASC", con);
                 OleDbDataReader dr = komut.ExecuteReader();
                 while (dr.Read())
                 {
