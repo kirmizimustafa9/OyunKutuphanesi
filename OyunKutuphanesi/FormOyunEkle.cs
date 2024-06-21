@@ -21,7 +21,9 @@ namespace OyunKutuphanesi
         {
             InitializeComponent();
             fileDialog_resimyolu.Filter = "Image files (*.jpg;*.jpeg;*.png;*.gif;*.bmp)|*.jpg;*.jpeg;*.png;*.gif;*.bmp|All files (*.*)|*.*";
-            fileDialog_oyunyolu.Filter = "Executable files (*.exe)|*.exe|All files (*.*)|*.*";
+            fileDialog_oyunyolu.Filter = "Executable files (*.exe, *.lnk, *.url)|*.exe;*.lnk;*.url|All files (*.*)|*.*";
+
+
 
         }
 
