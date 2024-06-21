@@ -78,7 +78,7 @@ namespace OyunKutuphanesi
             this.MaximizeBox = false;
             this.Name = "FormAnasayfa";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Yakisikli Oyun Kütüphanesi";
+            this.Text = "Oyun Kütüphanesi";
             this.Load += new System.EventHandler(this.FormAnasayfa_Load);
             this.ResumeLayout(false);
 
